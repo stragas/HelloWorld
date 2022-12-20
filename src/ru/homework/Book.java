@@ -2,17 +2,17 @@ package ru.homework;
 
 public class Book {
 
-        private String authorName;
+        private Author authorName;
         private String bookName;
         private int publishingYear;
 
         public Book(String authorName, String bookName, int publishingYear){
-            this.authorName = authorName;
+            authorName = authorName;
             this.bookName = bookName;
             this.publishingYear = publishingYear;
         }
 
-    public String getAuthorName() {
+    public Author getAuthorName() {
         return authorName;
     }
 
