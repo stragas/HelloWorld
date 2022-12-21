@@ -11,7 +11,6 @@ public class Book {
             this.bookName = bookName;
             this.publishingYear = publishingYear;
         }
-
     public Author getAuthorName() {
         return authorName;
     }

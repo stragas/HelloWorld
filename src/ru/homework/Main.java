@@ -9,7 +9,6 @@ public class Main {
         Author  myAuthor2 = new Author("Александр", "Пушкин");
       //  System.out.println(myAuthor1.getFirstName());
 
-
         myBook1.setPublishingYear(1967);
         System.out.println(myBook1.getPublishingYear());
 
