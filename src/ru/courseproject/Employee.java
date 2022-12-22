@@ -13,7 +13,6 @@ public class Employee {
                 this.depart = depart;
                 this.salary = salary;
                 id = ++counter;
-
         }
         public void setFullName(String fullName) {
                 this.fullName = fullName;

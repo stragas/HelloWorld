@@ -18,8 +18,17 @@ public class CourseProject1 {
                 new Employee("Григорьев Вячеслав Антонович", 5, 66392),
                 new Employee("Иванов Игорь Геннадьевич", 4, 57323)
         };
-
-
+        printAllEmployees();
+        double sum = printSumSalary();
+            System.out.println(sum);
+        double min = printMinSalary();
+            System.out.println(min);
+        double max = printMaxSalary();
+            System.out.println(max);
+        double result = printMidlSalary();
+            System.out.println(result);
+        printFullName();
+    }
         // 1. Вывводим все данные о сотрудниках
         private static void printAllEmployees() {
             for (Employee employee : employees) {
@@ -28,18 +37,17 @@ public class CourseProject1 {
         }
 
         // 2. Посчитать сумму затрат на зарплаты в месяц.
-        private static  void printSumSalary() {
+        private static double printSumSalary() {
                double sum = 0;
          for (Employee employee : employees) {
             if (employees != null){
                 sum = sum + employee.getSalary();
             }
-         }
-        System.out.println(sum);
+         }return sum;
         }
 
         // 3.Найти сотрудника с минимальной зарплатой.
-        private static  void printMinSalary() {
+        private static  double printMinSalary() {
 
             double min = employees[1].getSalary();
             String minSalary = employees[1].getFullName();
@@ -49,12 +57,13 @@ public class CourseProject1 {
                     minSalary = employee.getFullName();
                 }
             }
-            System.out.println(min + " " + minSalary);
+            return min;
+
         }
 
         // 4.Найти сотрудника с максимальной зарплатой.
 
-        private static  void printMaxSalary() {
+        private static  double printMaxSalary() {
             double max = employees[1].getSalary();
             String maxSalary = employees[1].getFullName();
             for (Employee employee : employees) {
@@ -63,19 +72,19 @@ public class CourseProject1 {
                     maxSalary = employee.getFullName();
                 }
             }
-            System.out.println(max + " " + maxSalary);
+            return max;
         }
 
         // 5.Подсчитать среднее значение зарплат.
 
-        private static  void printMidlSalary() {
+        private static  double printMidlSalary() {
             double sum2 = 0;
             int i = 0;
             for (Employee employee : employees) {
                 sum2 = sum2 + employee.getSalary();
                 i++;
             }
-            System.out.println(sum2 / i);
+            return (sum2 / i);
         }
 
         // 6. Получить Ф. И. О. всех сотрудников.
@@ -85,5 +94,7 @@ public class CourseProject1 {
                 System.out.println(employee.getFullName());
             }
         }
-    }
+
+
+
 }
