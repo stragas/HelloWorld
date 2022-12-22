@@ -17,7 +17,7 @@ public class Hwmetod {
         // Задача 3 Способ доставки.
 
         System.out.println("Задача 3, Способ доставки");
-        int deliveryDistance = 95;
+        int deliveryDistance = 30;
         deliveryMethod(deliveryDistance);
     }
 
@@ -51,6 +51,7 @@ public class Hwmetod {
         while ( i <= 100 ){
             if (deliveryDistance2 <= i){
                 System.out.println("Доставка занимает " + j + " дней");
+                break;
             }
 
             j++;
