@@ -29,6 +29,8 @@ public class CourseProject1 {
             System.out.println(result);
         printFullName();
     }
+
+
         // 1. Вывводим все данные о сотрудниках
         private static void printAllEmployees() {
             for (Employee employee : employees) {
