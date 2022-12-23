@@ -18,6 +18,8 @@ public class CourseProject1 {
                 new Employee("Григорьев Вячеслав Антонович", 5, 66392),
                 new Employee("Иванов Игорь Геннадьевич", 4, 77323)
         };
+
+
         printAllEmployees();
         double sum = printSumSalary();
             System.out.println(sum);
@@ -51,7 +53,7 @@ public class CourseProject1 {
         private static  Employee printMinSalary() {
             int temp = employees[1].getId();
             double min = employees[1].getSalary();
-            String minSalary = employees[1].getFullName();
+
             for (Employee employee : employees) {
                 if (min > employee.getSalary()) {
                     min = employee.getSalary();
@@ -64,7 +66,7 @@ public class CourseProject1 {
         private static Employee printMaxSalary() {
             int temp = employees[1].getId();
             double max = employees[1].getSalary();
-            String maxSalary = employees[1].getFullName();
+
             for (Employee employee : employees) {
                 if (max < employee.getSalary()) {
                     max = employee.getSalary();
@@ -73,6 +75,7 @@ public class CourseProject1 {
             }
             return employees[temp];
         }
+
 
         // 5.Подсчитать среднее значение зарплат.
 
