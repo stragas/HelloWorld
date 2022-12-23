@@ -7,7 +7,7 @@ public class CourseProject1 {
     public static void main(String[] args) {
 
         employees = new Employee[]{
-                new Employee("Горбунов Игорь Матвеевич", 2, 65415),
+                new Employee("Горбунов Игорь Матвеевич", 2, 35415),
                 new Employee("Глухова Елена Вадимовна", 1, 55492),
                 new Employee("Круглова Вера Максимовна", 1, 66941),
                 new Employee("Свешникова Мария Никитична", 4, 57849),
@@ -16,15 +16,13 @@ public class CourseProject1 {
                 new Employee("Александрова Вероника Марковна", 2, 55325),
                 new Employee("Тимофеева Василиса Матвеевна", 3, 58212),
                 new Employee("Григорьев Вячеслав Антонович", 5, 66392),
-                new Employee("Иванов Игорь Геннадьевич", 4, 57323)
+                new Employee("Иванов Игорь Геннадьевич", 4, 77323)
         };
         printAllEmployees();
         double sum = printSumSalary();
             System.out.println(sum);
-        double min = printMinSalary();
-            System.out.println(min);
-        double max = printMaxSalary();
-            System.out.println(max);
+        System.out.println("Минимальная зарплата у сотрудника - " + printMinSalary());
+        System.out.println("Максимальная зарплата у сотрудника - " + printMaxSalary());
         double result = printMidlSalary();
             System.out.println(result);
         printFullName();
@@ -45,36 +43,35 @@ public class CourseProject1 {
             if (employees != null){
                 sum = sum + employee.getSalary();
             }
-         }return sum;
+         }
+         return sum;
         }
 
         // 3.Найти сотрудника с минимальной зарплатой.
-        private static  double printMinSalary() {
-
+        private static  Employee printMinSalary() {
+            int temp = employees[1].getId();
             double min = employees[1].getSalary();
             String minSalary = employees[1].getFullName();
             for (Employee employee : employees) {
                 if (min > employee.getSalary()) {
                     min = employee.getSalary();
-                    minSalary = employee.getFullName();
+                    temp = employee.getId() - 1;
                 }
             }
-            return min;
-
+            return employees[temp];
         }
-
         // 4.Найти сотрудника с максимальной зарплатой.
-
-        private static  double printMaxSalary() {
+        private static Employee printMaxSalary() {
+            int temp = employees[1].getId();
             double max = employees[1].getSalary();
             String maxSalary = employees[1].getFullName();
             for (Employee employee : employees) {
                 if (max < employee.getSalary()) {
                     max = employee.getSalary();
-                    maxSalary = employee.getFullName();
+                    temp = employee.getId() - 1;
                 }
             }
-            return max;
+            return employees[temp];
         }
 
         // 5.Подсчитать среднее значение зарплат.
